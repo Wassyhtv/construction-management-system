@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Reports</title>
+    <link rel="stylesheet" href="report.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Project Reports</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Completion Date</th>
+          </tr>
+        </thead>
+        <tbody id="reportTableBody">
+          <!-- Reports will be loaded here -->
+        </tbody>
+      </table>
+      <button onclick="window.location.href='construction-dashboard.html'">
+        Back to Dashboard
+      </button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reports = JSON.parse(localStorage.getItem("reports")) || [];
+        const tableBody = document.getElementById("reportTableBody");
+
+        if (reports.length === 0) {
+          tableBody.innerHTML =
+            "<tr><td colspan='2'>No reports available.</td></tr>";
+        } else {
+          reports.forEach((report) => {
+            const row = `<tr>
+            <td>${report.projectName}</td>
+            <td>${report.completedOn}</td>
+          </tr>`;
+            tableBody.innerHTML += row;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

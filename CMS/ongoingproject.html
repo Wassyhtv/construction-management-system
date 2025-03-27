@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ongoing Projects</title>
+    <link rel="stylesheet" href="ongoingproject.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ongoing Projects</h1>
+
+      <!-- Resource Management Form -->
+      <div class="card">
+        <h2>Add Resource</h2>
+        <form id="resource-form">
+          <label for="resource-name">Resource Name:</label>
+          <input type="text" id="resource-name" required />
+
+          <label for="resource-type">Resource Type:</label>
+          <select id="resource-type" required>
+            <option value="Material">Material</option>
+            <option value="Equipment">Equipment</option>
+            <option value="Labor">Labor</option>
+          </select>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" required />
+
+          <label for="cost">Cost per Unit:</label>
+          <input type="number" id="cost" required />
+
+          <label for="notes">Notes:</label>
+          <textarea id="notes"></textarea>
+
+          <button type="submit">Add Resource</button>
+        </form>
+      </div>
+
+      <!-- Resource Table -->
+      <div class="card">
+        <h2>Resource List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Resource Name</th>
+              <th>Type</th>
+              <th>Quantity</th>
+              <th>Cost per Unit</th>
+              <th>Notes</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="resource-table-body">
+            <!-- Added resources will appear here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Document Upload -->
+      <div class="card">
+        <h2>Upload Documents</h2>
+        <input type="file" id="file-upload" />
+        <button onclick="uploadDocument()">Upload</button>
+        <ul id="uploaded-files"></ul>
+      </div>
+
+      <!-- Task Management -->
+      <div class="card">
+        <h2>Task Management</h2>
+        <form id="task-form">
+          <label for="task-name">Task Name:</label>
+          <input type="text" id="task-name" required />
+
+          <label for="assigned-to">Assigned To:</label>
+          <input type="text" id="assigned-to" required />
+
+          <label for="due-date">Due Date:</label>
+          <input type="date" id="due-date" required />
+
+          <label for="status">Status:</label>
+          <select id="status" required>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <button type="submit">Add Task</button>
+        </form>
+
+        <h3>Task List</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Assigned To</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="task-table-body">
+            <!-- Added tasks will appear here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a href="construction.html" class="back-to-dashboard"
+      >⬅ Go Back to Dashboard</a
+    >
+
+    <script src="ongoingproject.js"></script>
+  </body>
+</html>

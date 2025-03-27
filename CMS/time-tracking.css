@@ -1,0 +1,178 @@
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 22px;
+  color: #0275d8;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Time Display */
+.time-display,
+.session,
+.summary {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-green {
+  background: #28a745;
+  color: white;
+}
+
+.btn-green:hover {
+  background: #218838;
+}
+
+.btn-red {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-red:hover {
+  background: #c82333;
+}
+
+.reset-btn {
+  background: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+}
+
+.reset-btn:hover {
+  background: #e68900;
+}
+
+/* Employee Records */
+.records {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.records h3 {
+  text-align: center;
+  color: #333;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px; /* Reduce font size */
+}
+
+th {
+  background-color: #0275d8;
+  color: white;
+  font-size: 12px; /* Reduce header font size */
+  padding: 6px; /* Reduce padding */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Dashboard-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #0275d8;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.Dashboard-btn:hover {
+  background-color: #025aa5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .btn {
+    margin: 5px 0;
+  }
+}

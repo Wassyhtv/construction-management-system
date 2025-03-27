@@ -1,0 +1,138 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Login Card */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.card-header .icon img {
+  width: 55px;
+  margin-bottom: 10px;
+}
+
+.card-header h2 {
+  font-size: 24px;
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+.card-header p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Form Styling */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.input-group input:focus {
+  border-color: #1e3c72;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.3);
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #1e3c72;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #174377;
+  box-shadow: 0 4px 10px rgba(30, 60, 114, 0.3);
+}
+
+/* Footer */
+.card-footer {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.card-footer a {
+  color: #1e3c72;
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    max-width: 350px;
+  }
+}

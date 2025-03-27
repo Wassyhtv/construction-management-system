@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Time Tracker</title>
+    <link rel="stylesheet" href="time-tracking.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2 class="title">
+          <i class="fas fa-clock"></i> Employee Time Tracker
+        </h2>
+
+        <label for="employee-name" class="label">Employee Name</label>
+        <input
+          type="text"
+          id="employee-name"
+          placeholder="Enter name..."
+          class="input-field"
+        />
+
+        <div class="time-display">
+          <p class="label">Current Time</p>
+          <p id="current-time" class="time"></p>
+          <p id="current-date" class="date"></p>
+        </div>
+
+        <div class="session">
+          <p class="label">Current Session</p>
+          <p id="elapsed-time" class="time">00:00:00</p>
+        </div>
+
+        <div class="buttons">
+          <button id="clock-in" class="btn btn-green">
+            <i class="fas fa-play"></i> Clock In
+          </button>
+          <button id="clock-out" class="btn btn-red" disabled>
+            <i class="fas fa-stop"></i> Clock Out
+          </button>
+        </div>
+
+        <div class="summary">
+          <p class="label">Today's Total</p>
+          <p id="total-time" class="total-time">0.00 hours</p>
+        </div>
+      </div>
+
+      <div class="records">
+        <h3>Employee Time Logs</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Employee</th>
+              <th>Clock In</th>
+              <th>Clock Out</th>
+              <th>Duration (hrs)</th>
+            </tr>
+          </thead>
+          <tbody id="records-table"></tbody>
+        </table>
+        <button id="reset-records" class="reset-btn">Reset Records</button>
+        <div class="button-container">
+          <a href="construction.html" class="Dashboard-btn">Dashboard</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="time-tracking.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
